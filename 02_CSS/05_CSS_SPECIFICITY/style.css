@@ -1,0 +1,40 @@
+/* CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above CSS will be purple.
+
+Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages.
+
+Position and order of appearance: the order in which your CSS rules appear
+Specificity: an algorithm that determines which CSS selector has the strongest match
+Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS
+Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type */
+
+h1 {
+    color: aqua;
+}
+
+/* The specificity of this selector is 10  */
+
+/* The specificity of this selector is 1 + 10 = 11  */
+/* h1.yellow {
+    color: yellow;
+} */
+.yellow {
+    color: yellow;
+}
+/* This is an example of attribute selector. The specificity of this selector is 10 */
+[data-x=a] {
+    color: maroon;
+}
+
+/* The specificity of this selector is 10  */
+.cred {
+    color: red;
+}
+
+.cpurple {
+    color: purple;
+}
+
+/* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
+a.harryclass.rohan-class[href]:hover {
+    color: blueviolet;
+}
