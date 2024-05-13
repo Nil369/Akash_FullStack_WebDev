@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr = [2,5,6,7,12,11,12,13,13,18,69]
+        function doubleTrouble(arr) {
+    return arr.map((element, index) => {
+        if (index === 0 || element !== arr[index - 1]) {
+            return element * 2;
+        } else {
+            return element;
+        }
+    });
+}
+
+    </script>
+</body>
+</html>

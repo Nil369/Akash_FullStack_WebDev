@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style the button */
+.add-note-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* On hover, change the background color */
+.add-note-btn:hover {
+    background-color: #45a049;
+}
+
+/* Add some margin to the notes container */
+.notes {
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+
+<body>
+    <button class="add-note-btn">Add Note</button>
+    <div class="notes"></div>
+    <script>
+
+        function saveNotesToLocalStorage(notes) {
+            localStorage.setItem("notes", JSON.stringify(notes));
+        }
+
+        function getNotesFromLocalStorage() {
+            const notesString = localStorage.getItem("notes");
+            return notesString ? JSON.parse(notesString) : [];
+        }
+
+        function displayNotes() {
+            const notes = getNotesFromLocalStorage();
+            const notesContainer = document.querySelector(".notes");
+            notesContainer.innerHTML = "";
+
+            notes.forEach(note => {
+                const noteElement = document.createElement("div");
+                noteElement.textContent = note;
+                notesContainer.appendChild(noteElement);
+            });
+        }
+
+        document.querySelector("button").addEventListener("click", () => {
+            const note = prompt("Enter your note");
+            const notes = getNotesFromLocalStorage();
+            notes.push(note);
+            saveNotesToLocalStorage(notes);
+            displayNotes();
+        });
+
+        // Display notes on page load
+        displayNotes();
+
+    </script>
+</body>
+
+</html>
