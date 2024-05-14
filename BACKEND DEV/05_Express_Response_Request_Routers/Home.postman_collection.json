@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "589008f9-47a4-48cf-822c-78d1efd52567",
+		"name": "Home",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31397255",
+		"_collection_link": "https://dark-spaceship-535638.postman.co/workspace/325114c5-3335-4bcb-937e-38009555aa5d/collection/31397255-589008f9-47a4-48cf-822c-78d1efd52567?action=share&source=collection_link&creator=31397255"
+	},
+	"item": [
+		{
+			"name": "get home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post Home",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Home api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		}
+	]
+}
