@@ -22,5 +22,5 @@ class User {
   let user = new User("John");
   console.log(user.name); // John
   
-  user.name = "Harry" // Name is too short.
+  user.name = "Suu" // Name is too short.
   console.log(user.name)
